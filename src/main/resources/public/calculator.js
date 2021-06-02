@@ -2,13 +2,35 @@ var inter = window/setInterval(update,10);
 
 function update(){
     var mark = document.getElementById("t2").value/ document.getElementById("t3").value;
-    document.getElementById("t4").innerHTML= mark*100;
+
     var mark1 = document.getElementById("t12").value/ document.getElementById("t13").value;
-    document.getElementById("t14").innerHTML= mark1*100;
+
     var mark2 = document.getElementById("t22").value/ document.getElementById("t23").value;
-    document.getElementById("t24").innerHTML= mark2*100;
+
     var mark3 = document.getElementById("t32").value/ document.getElementById("t33").value;
-    document.getElementById("t34").innerHTML= mark3*100;
+    mark3 = mark3*100;
+    mark2 = mark2*100;
+    mark1 = mark1*100;
+    mark = mark*100;
+    if(isNaN(mark)){
+        mark = 0;
+
+    }
+    if(isNaN(mark1)){
+        mark1 = 0;
+
+    }
+    if(isNaN(mark2)){
+        mark2 = 0;
+
+    }
+    if(isNaN(mark3)){
+        mark3 = 0;
+    }
+    document.getElementById("t34").innerHTML = mark3;
+    document.getElementById("t24").innerHTML = mark2;
+    document.getElementById("t14").innerHTML = mark1;
+    document.getElementById("t4").innerHTML = mark;
 }
 
 function ms(){
